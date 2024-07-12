@@ -10,4 +10,10 @@ import pytz
 root = Tk()
 root.title("Weather App")
 root.geometry("900x500+300+200")
-root.resizable()
+root.resizable(False, False)
+
+
+#search box
+
+search_image = PhotoImage(file)
+root.mainloop()
