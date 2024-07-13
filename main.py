@@ -20,6 +20,12 @@ myimage = Label(image=search_image)
 myimage.place(x=20, y=20)
 
 
-textField = tk.Entry(root, justify="center", width=17, font=("poppins", 25, "bold"))
+textField = tk.Entry(root, justify="center", width=17, font=("poppins", 25, "bold"), bg="#404040",border=0,  fg="white")
 textField.place(x=50, y= 40)
+textField.focus()
+
+
+Search_icon = PhotoImage(file="search_icon.png")
+myimage_icon = Button(image)
+
 root.mainloop()
