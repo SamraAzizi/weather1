@@ -15,5 +15,7 @@ root.resizable(False, False)
 
 #search box
 
-search_image = PhotoImage(file)
+search_image = PhotoImage(file="search.png")
+myimage = Label(image=search_image)
+myimage.place(x=20, y=20)
 root.mainloop()
