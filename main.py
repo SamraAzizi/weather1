@@ -26,6 +26,14 @@ textField.focus()
 
 
 Search_icon = PhotoImage(file="search_icon.png")
-myimage_icon = Button(image)
+myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404040")
+myimage_icon.place(x=400, y=34)
+
+
+#logo
+
+Logo_image = PhotoImage(file="logo.png")
+Logo = Label(image= Logo_image)
+Logo.place(x=150, y=100)
 
 root.mainloop()
