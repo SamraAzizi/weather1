@@ -18,4 +18,8 @@ root.resizable(False, False)
 search_image = PhotoImage(file="search.png")
 myimage = Label(image=search_image)
 myimage.place(x=20, y=20)
+
+
+textField = tk.Entry(root, justify="center", width=17, font=("poppins", 25, "bold"))
+textField.place(x=50, y= 40)
 root.mainloop()
