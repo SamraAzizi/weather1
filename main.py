@@ -36,4 +36,15 @@ Logo_image = PhotoImage(file="logo.png")
 Logo = Label(image= Logo_image)
 Logo.place(x=150, y=100)
 
+
+# bottom box
+
+frame_image = PhotoImage(file="box.png")
+frame_myimage = Label(image = frame_image)
+frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
+
+#label
+
+label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+
 root.mainloop()
