@@ -46,5 +46,19 @@ frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
 #label
 
 label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+label.place(x=120, y=400)
+
+labe2 = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe2.place(x=120, y=400)
+
+
+labe3 = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe3.place(x=120, y=400)
+
+
+
+labe4 = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe4.place(x=120, y=400)
+
 
 root.mainloop()
