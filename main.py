@@ -49,7 +49,7 @@ label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg=
 label.place(x=120, y=400)
 
 labe2 = Label(root, text="HUMIDITY", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
-labe2.place(x=25, y=400)
+labe2.place(x=250, y=400)
 
 
 labe3 = Label(root, text="DESCRIPITION", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
@@ -59,6 +59,13 @@ labe3.place(x=430, y=400)
 
 labe4 = Label(root, text="PRESSURE", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
 labe4.place(x=650, y=400)
+
+
+t = Label(font=("arial", 70, "bold"), fg="#ee666d")
+t.place(x=400, y=150)
+
+c= Label(font=("arial", 15,"bold"))
+c.place(x=400, y= 250)
 
 
 root.mainloop()
