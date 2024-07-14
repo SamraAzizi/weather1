@@ -67,5 +67,18 @@ t.place(x=400, y=150)
 c= Label(font=("arial", 15,"bold"))
 c.place(x=400, y= 250)
 
+w=Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
+w.place(x=120, y= 430)
+
+w=Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
+w.place(x=120, y= 430)
+
+
+w=Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
+w.place(x=120, y= 430)
+
+
+w=Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
+w.place(x=120, y= 430)
 
 root.mainloop()
