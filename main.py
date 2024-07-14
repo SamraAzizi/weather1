@@ -2,7 +2,7 @@ from tkinter import *
 import tkinter as tk
 from geopy.geocoders import Nominatim
 from tkinter import ttk, messagebox
-from timezonefinder import TimezonrFinder
+from timezonefinder import TimezoneFinder
 from datetime import datetime
 import requests
 import pytz
@@ -17,8 +17,13 @@ def getWeather():
 
     geolocator = Nominatim(user_agent="geoapiExercises")
     location = geolocator.geocode(city)
-    obj = TimezonrFinder()
+    obj = TimezoneFinder()
+    result = obj.timezone_at(lng = location.longitude, lat=location.latitude)
+    print(result)
 
+    home= pytz.timezone(result)
+    local_time = datetime.now(home)
+    current_time = local_time.strftime()
 
 
 #search box
@@ -53,19 +58,19 @@ frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
 
 #label
 
-label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="#1ab5ef")
 label.place(x=120, y=400)
 
-labe2 = Label(root, text="HUMIDITY", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe2 = Label(root, text="HUMIDITY", font=("helvetica", 15, 'bold'), fg="white", bg="#1ab5ef")
 labe2.place(x=250, y=400)
 
 
-labe3 = Label(root, text="DESCRIPITION", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe3 = Label(root, text="DESCRIPITION", font=("helvetica", 15, 'bold'), fg="white", bg="#1ab5ef")
 labe3.place(x=430, y=400)
 
 
 
-labe4 = Label(root, text="PRESSURE", font=("helvetica", 15, 'bold'), fg="white", bg="1ab5ef")
+labe4 = Label(root, text="PRESSURE", font=("helvetica", 15, 'bold'), fg="white", bg="#1ab5ef")
 labe4.place(x=650, y=400)
 
 
