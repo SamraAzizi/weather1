@@ -24,6 +24,8 @@ def getWeather():
     home= pytz.timezone(result)
     local_time = datetime.now(home)
     current_time = local_time.strftime("%I:%M %P")
+    clock.config(text=current_time)
+    name.config(text="CURRENT WEATHER")
 
 
 #search box
@@ -61,6 +63,7 @@ frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
 name = Label(root, font=("arial", 15, "bold"))
 name.place(x=30, y=100)
 clock = Label(root, font=("Helvetica", 20))
+clock.place(x=30, y= 130)
 
 #label
 
