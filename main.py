@@ -29,7 +29,7 @@ def getWeather():
 
     # weather
 
-    api = "https://api.openweathermap.org/data/2.5/weather?lat="+city+""
+    api = +city+""
 
 
     json_data = requests.get(api).json()
