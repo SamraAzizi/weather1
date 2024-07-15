@@ -29,7 +29,7 @@ def getWeather():
 
     # weather
 
-    api = "https://api.openweathermap.org/data/2.5/weather?lat="+city+""
+    api = "https://api.openweathermap.org/data/2.5/weather?lat="+city+"9c526fd918fcb51657cbf5bf507453d7"
 
 
     json_data = requests.get(api).json()
@@ -41,7 +41,10 @@ def getWeather():
     wind = json_data['wind']['speed']
 
     t.config(text = (temp, "°"))
-    
+    c.config(text=(condition, "|","FEELS", "LIKE", temp, "°"))
+
+    w.config()
+
 #search box
 
 search_image = PhotoImage(file="search.png")
