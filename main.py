@@ -37,6 +37,11 @@ def getWeather():
     description = json_data['weather'][0]['description']
     temp = int(json_data['main']['temp']-273.15)
     pressure = json_data['main']['pressure']
+    humidity = json_data['main']['humidity']
+    wind = json_data['wind']['speed']
+
+    t.config(text = (temp, "°"))
+    
 #search box
 
 search_image = PhotoImage(file="search.png")
