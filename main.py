@@ -29,12 +29,14 @@ def getWeather():
 
     # weather
 
-    api = +city+""
+    api = "https://api.openweathermap.org/data/2.5/weather?lat="+city+""
 
 
     json_data = requests.get(api).json()
     condition = json_data['weather'][0]['main']
     description = json_data['weather'][0]['description']
+    temp = int(json_data['main']['temp']-273.15)
+    pressure = json_data['main']['pressure']
 #search box
 
 search_image = PhotoImage(file="search.png")
