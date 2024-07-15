@@ -27,6 +27,14 @@ def getWeather():
     clock.config(text=current_time)
     name.config(text="CURRENT WEATHER")
 
+    # weather
+
+    api = "https://api.openweathermap.org/data/2.5/weather?lat="+city+""
+
+
+    json_data = requests.get(api).json()
+    condition = json_data['weather'][0]['main']
+    description = json_data['weather'][0]['description']
 #search box
 
 search_image = PhotoImage(file="search.png")
