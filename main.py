@@ -27,7 +27,6 @@ def getWeather():
     clock.config(text=current_time)
     name.config(text="CURRENT WEATHER")
 
-
 #search box
 
 search_image = PhotoImage(file="search.png")
@@ -64,7 +63,7 @@ name = Label(root, font=("arial", 15, "bold"))
 name.place(x=30, y=100)
 clock = Label(root, font=("Helvetica", 20))
 clock.place(x=30, y= 130)
-
+ 
 #label
 
 label = Label(root, text="WIND", font=("helvetica", 15, 'bold'), fg="white", bg="#1ab5ef")
