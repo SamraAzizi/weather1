@@ -43,7 +43,10 @@ def getWeather():
     t.config(text = (temp, "°"))
     c.config(text=(condition, "|","FEELS", "LIKE", temp, "°"))
 
-    w.config()
+    w.config(text=wind)
+    h.config(text=humidity)
+    d.config(text=description)
+    p.config(text=pressure)
 
 #search box
 
