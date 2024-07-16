@@ -46,7 +46,9 @@ def getWeather():
         else:
             print("API key is invalid!")
         
-        resp
+        response = requests.get(api_url)
+        if response.status_code != 200:
+            raise Exception("Failed to retrieve weather data")
 
         json_data = response.json()
         if 'weather' not in json_data or 'main' not in json_data:
