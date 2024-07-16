@@ -6,6 +6,9 @@ from timezonefinder import TimezoneFinder
 from datetime import datetime
 import requests
 import pytz
+
+
+
 # Initialize the tkinter GUI
 root = tk.Tk()
 root.title("Weather App")
@@ -131,7 +134,4 @@ h.place(x=280, y=430)
 d = Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
 d.place(x=450, y=430)
 
-p = Label(text="...", font=("arial", 20, "bold"), bg="#1ab5ef")
-p.place(x=670, y=430)
 
-root.mainloop()
