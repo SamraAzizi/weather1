@@ -6,12 +6,13 @@ from timezonefinder import TimezoneFinder
 from datetime import datetime
 import requests
 import pytz
-
-root = Tk()
+# Initialize the tkinter GUI
+root = tk.Tk()
 root.title("Weather App")
 root.geometry("900x500+300+200")
 root.resizable(False, False)
 
+# Define the getWeather() function
 def getWeather():
     try:
         city = textField.get()
@@ -20,7 +21,7 @@ def getWeather():
         location = geolocator.geocode(city)
         if location is None:
             raise ValueError("Invalid City Name")
-        
+
         obj = TimezoneFinder()
         result = obj.timezone_at(lng=location.longitude, lat=location.latitude)
         if result is None:
@@ -33,10 +34,17 @@ def getWeather():
         name.config(text="CURRENT WEATHER")
 
         # weather
-        api_key = "0dc32f3a5ff4eb0bb1fa3be143ed4fe4"
+        api_key = "9c526fd918fcb51657cbf5bf507453d7"
         api_url = f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid={api_key}"
         
-        json_data = requests.get(api_url).json()
+        response = requests.get(api_url)
+        if response.status_code != 200:
+            raise Exception("Failed to retrieve weather data")
+
+        json_data = response.json()
+        if 'weather' not in json_data or 'main' not in json_data:
+            raise Exception("Invalid weather data")
+
         condition = json_data['weather'][0]['main']
         description = json_data['weather'][0]['description']
         temp = int(json_data['main']['temp'] - 273.15)
@@ -51,9 +59,12 @@ def getWeather():
         d.config(text=description)
         p.config(text=pressure)
 
+    except ValueError as e:
+        messagebox.showerror("Weather App", str(e))
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Weather App", "Error fetching weather data: " + str(e))
     except Exception as e:
-        messagebox.showerror("Weather App", "Invalid Entry")
-
+        messagebox.showerror("Weather App", "Unexpected error occurred: " + str(e))
 # search box
 search_image = PhotoImage(file="search.png")
 myimage = Label(image=search_image)
