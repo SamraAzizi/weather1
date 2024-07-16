@@ -34,8 +34,17 @@ def getWeather():
         name.config(text="CURRENT WEATHER")
 
         # weather
-        api_key = "9c526fd918fcb51657cbf5bf507453d7"
-        api_url = f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid={api_key}"
+      
+
+        api_key = "0dc32f3a5ff4eb0bb1fa3be143ed4fe4"
+        api_url = f"http://api.openweathermap.org/data/2.5/weather?q=London&appid={api_key}"
+
+        response = requests.get(api_url)
+
+        if response.status_code == 200:
+            print("API key is valid!")
+        else:
+            print("API key is invalid!")
         
         response = requests.get(api_url)
         if response.status_code != 200:
