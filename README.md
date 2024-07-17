@@ -21,19 +21,3 @@ You can install the required libraries using pip:
 
 ```bash
 pip install requests geopy timezonefinder pytz
-
-# Installation and Usage Instructions
-
-## Prerequisites
-
-- Python 3.x
-- `requests` library
-- `tkinter` library
-- `geopy` library
-- `timezonefinder` library
-- `pytz` library
-
-You can install the required libraries using pip:
-
-```bash
-pip install requests geopy timezonefinder pytz
