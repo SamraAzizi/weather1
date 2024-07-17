@@ -11,3 +11,13 @@ A simple weather application built using Python and Tkinter. This app allows use
 ## Prerequisites
 
 - Python 3.x
+- `requests` library
+- `tkinter` library
+- `geopy` library
+- `timezonefinder` library
+- `pytz` library
+
+You can install the required libraries using pip:
+
+```bash
+pip install requests geopy timezonefinder pytz
